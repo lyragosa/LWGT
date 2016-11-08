@@ -16,11 +16,11 @@ function getSelectionText() {
     var activeEl = document.activeElement;
     var activeElTagName = activeEl ? activeEl.tagName.toLowerCase() : null;
     if (
-      (activeElTagName == "textarea" || activeElTagName == "input") &&
-      /^(?:text|search|password|tel|url)$/i.test(activeEl.type) &&
-      (typeof activeEl.selectionStart == "number")
+        (activeElTagName == "textarea" || activeElTagName == "input") &&
+        /^(?:text|search|password|tel|url)$/i.test(activeEl.type) &&
+        (typeof activeEl.selectionStart == "number")
     ) {
-      text = activeEl.value.slice(activeEl.selectionStart, activeEl.selectionEnd);
+        text = activeEl.value.slice(activeEl.selectionStart, activeEl.selectionEnd);
     } else if (window.getSelection) {
         text = window.getSelection().toString();
     }
@@ -28,7 +28,7 @@ function getSelectionText() {
 }
 
 
-jQuery("body").on("click","#LWGTWindow",function(e) {
+jQuery("body").on("click", "#LWGTWindow", function (e) {
     //nothing
     console.log('DO NOT CLOSE');
     e.stopPropagation();
@@ -36,36 +36,34 @@ jQuery("body").on("click","#LWGTWindow",function(e) {
 });
 
 
-
-
-jQuery("body").on("mouseup",function(e) {
-  var txt = getSelectionText();
-    if (txt.length > 0  && jQuery("#selectTextHintWindow").length >= 0  && jQuery(e.target).attr("id") != 'LWGTWindow' ) {
+jQuery("body").on("mouseup", function (e) {
+    var txt = getSelectionText();
+    if (txt.length > 0 && jQuery("#selectTextHintWindow").length >= 0 && jQuery(e.target).attr("id") != 'LWGTWindow') {
         jQuery("#LWGTWindow").remove();
         //console.log(txt);
         var kks = jQuery("#selectTextHintWindow").offset(); //TODO 这是一种很不稳定的依靠地精科技的做法，如果以后接盘者发现崩溃，请检查这里。
-        var y = kks.top; var x = kks.left;
-        if (y>0&&x>0) {
-             //console.log( getSelectionCharOffsetsWithin(document.body).start );
-            var xm = jQuery("<div class='urltip' id='LWGTWindow' style='margin: 0px; line-height: 16px; left: "+x+"px; top: "+ (y+25)  +"px; display: block;'></div>");
+        var y = kks.top;
+        var x = kks.left;
+        if (y > 0 && x > 0) {
+            //console.log( getSelectionCharOffsetsWithin(document.body).start );
+            var xm = jQuery("<div class='urltip' id='LWGTWindow' style='margin: 0px; line-height: 16px; left: " + x + "px; top: " + (y + 25) + "px; display: block;'></div>");
             var fin = '';
-            jQuery.getJSON("http://db.178.com/wow/api/mobile_api.php?func=getlangconv&encode=GBK&s="+txt,function(skt){
+            jQuery.getJSON("http://db.178.com/wow/api/mobile_api.php?func=getlangconv&encode=GBK&s=" + txt, function (skt) {
                 for (var i in skt.data) {
                     var px = skt.data[i];
                     //console.log(px.type_cn);
-                    fin += "<span class='teal'>"+px.type_cn+"</span> "+ px.name_cn + ' ' + px.name_tw + ' ' + px.name_en + '<br /> ';
+                    fin += "<span class='teal'>" + px.type_cn + "</span> " + px.name_cn + ' ' + px.name_tw + ' ' + px.name_en + '<br /> ';
                 }
-                     xm.html(fin);
+                xm.html(fin);
                 if (fin) jQuery("body").append(xm);
             });
         }
     }
     else {
-        if (jQuery(e.target).attr("id") != 'LWGTWindow' )
-        jQuery("#LWGTWindow").remove();
+        if (jQuery(e.target).attr("id") != 'LWGTWindow')
+            jQuery("#LWGTWindow").remove();
     }
 });
-
 
 
 function getSelectionCharOffsetsWithin(element) {
@@ -79,7 +77,7 @@ function getSelectionCharOffsetsWithin(element) {
         start = priorRange.toString().length;
         end = start + range.toString().length;
     } else if (typeof document.selection != "undefined" &&
-            (sel = document.selection).type != "Control") {
+        (sel = document.selection).type != "Control") {
         range = sel.createRange();
         priorRange = document.body.createTextRange();
         priorRange.moveToElementText(element);
