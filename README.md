@@ -10,12 +10,10 @@
 
 ## 如何使用
 
-本插件为用户脚本，托管在 <https://greasyfork.org> 
+本插件为用户脚本，托管在 [Greasy Fork](https://greasyfork.org|111) 上的 [这里](https://greasyfork.org/zh-CN/scripts/24654-lyragosa-s-wow-glossary-translation-in-nga)
 
-用户脚本使用方法请参见：<https://greasyfork.org/zh-CN/help/installing-user-scripts>
+用户脚本使用方法请参见 [这里](https://greasyfork.org/zh-CN/help/installing-user-scripts)
 
-## 技术支持
+##版权
 
-并没有什么技术支持。
-
-如果插件崩了，或者卡了，或者显示不出来，以及其他问题，都不关我事。
+本程序由 NGA论坛用户**莉诺雅·羽月**制作，使用 MIT License 协议发布。
