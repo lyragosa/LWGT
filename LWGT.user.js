@@ -1,17 +1,16 @@
 // ==UserScript==
 // @name         Lyragosa's WoW Glossary Translation in NGA
-// @namespace    XXX1
-// @version      0.2 Alpha
-// @description  为NGA论坛帖子提供“魔兽世界术语划词翻译”功能，选中的部分如果是魔兽世界术语，则会给出对应的简，繁与英文内容。
+// @namespace    https://github.com/lyragosa/LWGT
+// @version      1.0 Beta
+// @description  为NGA论坛帖子提供“划词翻译”功能，选中的部分如果是魔兽世界术语，则会给出对应的简，繁与英文内容。仅供NGA论坛使用
 // @author       Lyragosa
+// @license      MIT License
 // @require      http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js
 // @include      /^http://(bbs\.ngacn\.cc|nga\.178\.com|bbs\.nga\.cn|bbs\.bigccq\.cn)/(read\.php)/
 // @grant        GM_xmlhttpRequest
-// @grant    GM_addStyle
-// @grant    GM_getResourceText
+// @grant        GM_addStyle
+// @grant        GM_getResourceText
 // ==/UserScript==
-//var WOWDBCSS_SRC = GM_getResourceText ("WOWDBCSS");
-//GM_addStyle (WOWDBCSS_SRC);
 
 var qC = {
     '1': "black",
