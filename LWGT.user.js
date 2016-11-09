@@ -2,7 +2,7 @@
 // @name         Lyragosa's WoW Glossary Translation in NGA
 // @namespace    XXX1
 // @version      0.2 Alpha
-// @description  给使用繁体中文魔兽世界客户端的NGA论坛用户提供的一个方便快捷的一键转换简繁术语的功能。你们是不知道我在宠物区看到一大堆宠物名字然后在繁体客户端里面抓瞎一个也搜不到的痛苦之处……
+// @description  为NGA论坛帖子提供“魔兽世界术语划词翻译”功能，选中的部分如果是魔兽世界术语，则会给出对应的简，繁与英文内容。
 // @author       Lyragosa
 // @require      http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js
 // @include      /^http://(bbs\.ngacn\.cc|nga\.178\.com|bbs\.nga\.cn|bbs\.bigccq\.cn)/(read\.php)/
