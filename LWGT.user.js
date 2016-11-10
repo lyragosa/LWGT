@@ -24,6 +24,8 @@ var qC = {
 
 jQuery.noConflict();
 
+console.log("Lyragosa's WoW Glossary Translation Addon Enable!");
+
 GB2312UTF8 = {
     Dig2Dec: function (s) {
         var retV = 0;
@@ -194,7 +196,7 @@ jQuery("body").on("mouseup", function (e) {
             var xm = jQuery("<div class='urltip' id='LWGTWindow' style='margin: 0px; line-height: 16px; left: " + x + "px; top: " + (y + 25) + "px; display: block;'></div>");
             var fin = '<table id="" style="border-spacing:3px"><tr><td></td><td></td><td class="silver">zhCN</td><td class="silver">zhTW</td><td class="silver">enUS</td><td class="silver">链接</td></tr>';
             jQuery.getJSON("http://db.178.com/wow/api/mobile_api.php?func=getlangconv&encode=GBK&s=" + txt, function (skt) {
-                console.log(skt);
+                //console.log(skt);
                 var nm = skt.data.length;
                 for (var i in skt.data) {
                     var px = skt.data[i];
