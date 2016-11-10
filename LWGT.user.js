@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Lyragosa's WoW Glossary Translation in NGA
 // @namespace    https://github.com/lyragosa/LWGT
-// @version      1.0 Beta
+// @version      1.01 Beta
 // @description  为NGA论坛帖子提供“划词翻译”功能，选中的部分如果是魔兽世界术语，则会给出对应的简，繁与英文内容。仅供NGA论坛使用
 // @author       Lyragosa
 // @license      MIT License
