@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Lyragosa's WoW Glossary Translation in NGA
 // @namespace    https://github.com/lyragosa/LWGT
-// @version      1.01 Beta
+// @version      1.02 Beta
 // @description  为NGA论坛帖子提供“划词翻译”功能，选中的部分如果是魔兽世界术语，则会给出对应的简，繁与英文内容。仅供NGA论坛使用
 // @author       Lyragosa
 // @license      MIT License
@@ -195,7 +195,7 @@ jQuery("body").on("mouseup", function (e) {
             //console.log( getSelectionCharOffsetsWithin(document.body).start );
             var xm = jQuery("<div class='urltip' id='LWGTWindow' style='margin: 0px; line-height: 16px; left: " + x + "px; top: " + (y + 25) + "px; display: block;'></div>");
             var fin = '<table id="" style="border-spacing:3px"><tr><td></td><td></td><td class="silver">zhCN</td><td class="silver">zhTW</td><td class="silver">enUS</td><td class="silver">链接</td></tr>';
-            jQuery.getJSON("http://db.178.com/wow/api/mobile_api.php?func=getlangconv&encode=GBK&s=" + txt, function (skt) {
+            jQuery.getJSON("http://db.178.com/wow/api/mobile_api.php?func=getlangconv&s=" + GB2312UTF8.GB2312ToUTF8(txt), function (skt) {
                 //console.log(skt);
                 var nm = skt.data.length;
                 for (var i in skt.data) {
